@@ -5,7 +5,7 @@ const app = express()
 
 app.set('views', path.join(__dirname, './views'))
   .set('view engine', 'ejs')
-  .use(express.static('public'))
+  .use(express.static(path.join(__dirname, 'public')))
   .get('/', (req, res) => {
     res.render('index', { title: 'Index' })
   })
